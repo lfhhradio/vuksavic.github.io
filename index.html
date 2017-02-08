@@ -1,77 +1,72 @@
 <!DOCTYPE html>
-	<style>
-   		body {
-        	background: white;
-		overflow: hidden;
-		}
+<style>
+	body {
+		background: white;
+		overflow: hidden; }
 		
-		a {
-		color: black;
-		}
-		
-   		section {
-        	position: fixed;
-        	top: 50%;
-        	left: 50%;
-        	margin-right: -50%;
-        	transform: translate(-50%, -50%) }
-	</style>
+	a {
+		color: black; }
 
-	<title>vuk savić</title>
-  		<section>
-			<div align="center">
-			<font face="courier" font size="4">
-			<u><em><strong>vuk savić's personal website</strong></em></u></p>
-			<br>
-			<a href="https://soundcloud.com/vukintosh/">music</a> | <a href="https://vuksavic.deviantart.com/">art</a> | <a href="https://instagram.com/vukintosh/">photography</a> | <a href="https://github.com/vuksavic/">programming</a></p>
-			<br>
-			44°48'58.3"N 20°27'21.1"E</p>
-			<br>
-				[ ]</p>	
-			<br>
-			<em>
-				contact:</p>
-				<br>
-				vuks at sbb dot rs</p>
-				<br>
-				plus three eight one six zero six six two nine one four eight
-			</em>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r57/three.min.js"></script>
-				<script>
-					var camera, scene, renderer;
-					var geometry, material, mesh;
+	section {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%); }
+</style>
 
-					function init() {
+<title>vuk savić</title>
 
-						renderer = new THREE.CanvasRenderer();
-						renderer.setSize( window.innerWidth, window.innerHeight );
-						document.body.appendChild( renderer.domElement );
+<section>
+	<div align="center">
+	<font face="courier" font size="4"></font>
+	<u><em><strong>vuk savić's personal website</strong></em></u>
+	<br>
+		<a href="https://soundcloud.com/vukintosh/" target="_blank">music</a> | <a href="https://vuksavic.deviantart.com/" target="_blank">art</a> | <a href="https://instagram.com/vukintosh/" target="_blank">photography</a> | <a href="https://github.com/vuksavic/" target="_blank">programming</a></p>
+	<br>
+		44°48'58.3"N 20°27'21.1"E
+	<br>
+		[ ]	
+	<br>
+	<em>
+		contact:
+	<br>
+		vuks at sbb dot rs
+	<br>
+		plus three eight one six zero six six two nine one four eight
+	</em>
 
-						camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, window.innerWidth / window.innerHeight, window.innerWidth / window.innerHeight );
-						camera.position.z = 3;
-
-						scene = new THREE.Scene();
-
-						geometry = new THREE.CubeGeometry( 1, 1, 1 );
-						material = new THREE.MeshBasicMaterial( { color: 0xbababa, wireframe: true, wireframeLinewidth: 1 } );
-
-						mesh = new THREE.Mesh( geometry, material );
-						scene.add( mesh );
-					}
-
-					function animate() {
-
-						requestAnimationFrame( animate );
-
-						mesh.rotation.x = Date.now() * 0.0005;
-						mesh.rotation.y = Date.now() * 0.0005;
-
-						renderer.render( scene, camera );
-					}
-
-					init();
-					animate();
-			</script>
-		</div>
-	</font>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r57/three.min.js"></script>
+		<script>
+			var camera, scene, renderer;
+			var geometry, material, mesh;
+			
+			function init() {
+				renderer = new THREE.CanvasRenderer();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				
+				document.body.appendChild( renderer.domElement );
+				
+				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, window.innerWidth / window.innerHeight, window.innerWidth / window.innerHeight );
+				camera.position.z = 3;
+				
+				scene = new THREE.Scene();
+				
+				geometry = new THREE.CubeGeometry( 1, 1, 1 );
+				material = new THREE.MeshBasicMaterial( { color: 0xbababa, wireframe: true, wireframeLinewidth: 1 } );
+				mesh = new THREE.Mesh( geometry, material );
+				
+				scene.add( mesh ); }
+			
+			function animate() {
+				requestAnimationFrame( animate );
+				
+				mesh.rotation.x = Date.now() * 0.0005;
+				mesh.rotation.y = Date.now() * 0.0005;
+				
+				renderer.render( scene, camera ); }
+			
+			init();
+			animate();
+		</script>
 </section>
